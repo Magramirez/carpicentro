@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        
+    </h:head>
+    <h:body>
+        <nav>
+    <ul class="menu">
+
+        <li><img src="logo.png" height="50" width="100"/></li>
+        <li><a href="#"><i class="icon-home"></i>Gerente</a></li>
+        <li><a href="#"><i class="icon-home"></i>Usuarios</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Editar / Borrar</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><i class="icon-home"></i>Clientes</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Editar / Borrar</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><i class="icon-home"></i>Solicitudes</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Consultar estado de Solicitud</a></li>
+            </ul>
+        </li>
+
+        <li><a  href="vistaLogin.html"><i class="icon-bullhorn"></i>Cerrar Sesión</a></li>
+
+    </ul>
+</nav>
+
+<!-- Codigo del programa -->
+
+<div id="formulario">
+    <p id="description"><strong>Registro de Solicitud</strong></p>
+    <form id="survey-form">
+        <div class="conunto">
+            <div id="labels">
+                <label for="num" id="numero-label">* Numero: </label>
+            </div>
+            <   
+<!-- <p:inputText id="fRegistroR" type="date"  size="10" 
+value ="#{pacienteUI.paciente.fechaDeRegistro}" required="true" 
+
+                <p:inputText></p:inputText> MArca errores al usar esta 
+
+                El nombre de tu beanui.variable.atributo
+                />
+                -->
+            
+        <div class="conunto">
+            <div id="labels">
+                <label for="date">Fecha</label>
+                </div>
+            <div id="inputs">
+                <input id ="date" type="datetime-local" value="#{solicitudUI.solicitud.fecha}"></input>
+            </div>
+        </div>
+        <div class="conunto">
+            <div id="labels">
+                <label for="dateE">Fecha de Entrega</label>
+            </div>
+            <div id="inputs">
+                <input id ="dateE" type="date" value="#{solicitudUI.solicitud.fechaEntrega}"></input>
+            </div>
+        </div>
+           
+            <div class="conunto">
+            <div id="labels">
+                <label for="num" id="numero-label">Numero de Plano: </label>
+            </div>
+            <div id="inputs">
+                <input type="number" id="num" class="casilla" 
+                       placeholder="Numero de Plano" value="#{solicitudUI.solicitud.numeroPlano}"></input>
+            </div>
+        </div>
+            <div class="conunto">
+                <div id="labels">
+                    <label for="num" id="numero-label">Estado</label>
+                </div>
+                <div id="inputs">
+                    <input type="number" id="num" class="casilla" 
+                           placeholder="Ingresa el Estado de la Solicitud"
+                           value="#{solicitudUI.solicitud.estado}"></input>
+                </div>
+            </div>
+
+        <hr color="cadetblue" size="3"></hr>
+        <h2 align="center">Datos del Plano</h2>
+        <hr color="cadetblue" size="3"></hr>
+
+                <div class="conunto">
+                    <div id="labels">
+                        <label for="color" id="color-label">Color: </label>
+                    </div>
+                    <div id="inputs">
+                        <input type="text" 
+                               id="color" class="casilla" 
+                               placeholder="Indique el color"
+                               value="#{solicitudUI.solicitud.color}"></input>
+                    </div>
+                </div>
+                    <div class="conunto">
+                        <div id="labels">
+                            <label for="medidas" id="medidas-label">Medidas: </label>
+                        </div>
+                        <div id="inputs">
+                            <input type="text" id="medidas" class="casilla" 
+                                   placeholder="Indique las Medidas"
+                                   value="#{solicitudUI.solicitud.medida}"></input>
+                        </div>
+                    </div>
+                        <div class="conunto">
+                            <div id="labels">
+                                <label for="medidas" id="medidas-label">Acabado: </label>
+                            </div>
+                            <div id="inputs">
+                                <input type="text" id="medidas" class="casilla"
+                                       placeholder="Indique el Acabado de Madera"
+                                       value="#{solicitudUI.solicitud.medida}"></input>
+                            </div>
+                        </div>
+                            <div class="conunto">
+                                <div id="labels">
+                                    <label for="tipoMadera" id="tipoMadera-label">Tipo: </label>
+                                </div>
+                                <div id="inputs">
+                                    <input type="text" id="tipoMadera" class="casilla"
+                                           placeholder="Indique el Tipo de Madera"
+                                           value="#{solicitudUI.solicitud.tipoMadera}"></input>
+                                </div>
+                            </div>        
+        <h:commandButton action ="#{solicitudUI.registro()}" value ="Registrar"/>
+        <button type="submit" id="submit2">Cancelar</button>
+    </form>
+</div>
+
+    </h:body>
+</html>
+
+

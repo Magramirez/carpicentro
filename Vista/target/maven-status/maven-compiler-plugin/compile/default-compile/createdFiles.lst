@@ -1,0 +1,6 @@
+mx\enlacesoftware\ui\SolicitudBeanUI.class
+mx\enlacesoftware\ui\ClienteBeanUI.class
+mx\enlacesoftware\helper\SolicitudHelper.class
+mx\enlacesoftware\helper\ClienteHelper.class
+mx\enlacesoftware\helper\LoginHelper.class
+mx\enlacesoftware\ui\LoginBeanUI.class

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="../css/menu.css"><a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
+<nav><img src="logo.png" height="141" width="346"/>
+    <ul class="menu">
+        <li><a href="#"><i class="icon-home"></i>Usuarios</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Editar / Borrar</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><i class="icon-home"></i>Clientes</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Editar / Borrar</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><i class="icon-home"></i>Solicitudes</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Consultar estado de Solicitud</a></li>
+            </ul>
+        </li>
+
+        <li><a  href="#"><i class="icon-bullhorn" style="margin-left: 15%"></i>Cerrar Sesión</a></li>
+
+    </ul>
+</nav>
+
+<script>
+    $(document).ready(function(){
+        var touch 	= $('#touch-menu');
+        var menu 	= $('.menu');
+
+        $(touch).on('click', function(e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+
+        $(window).resize(function(){
+            var w = $(window).width();
+            if(w > 767 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+
+    });
+</script>

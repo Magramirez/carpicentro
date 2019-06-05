@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <nav>
+    <ul class="menu">
+
+        <li><img src="logo.png" height="50" width="100"/></li>
+        <li><a href="#"><i class="icon-home"></i>Gerente</a></li>
+
+        <li><a href="#"><i class="icon-home"></i>Usuarios</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Editar / Borrar</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><i class="icon-home"></i>Clientes</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Editar / Borrar</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><i class="icon-home"></i>Solicitudes</a>
+            <ul class="sub-menu">
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Consultar estado de Solicitud</a></li>
+            </ul>
+        </li>
+
+        <li><a  href="vistaLogin.html"><i class="icon-bullhorn"></i>Cerrar Sesión</a>
+        </li>
+
+    </ul>
+</nav>
+
+<div id="formulario">
+    <p id="description"><strong>Registro de Clientes</strong></p>
+    <form id="survey-form">
+        <div class="conunto">
+            <div id="labels">
+                <label for="num" id="numero-label">* Numero: </label>
+            </div>
+            <div id="inputs">
+                <input type="number" id="num" class="casilla" 
+                       placeholder="Numero de cliente" value="#{clienteUI.cliente.numeroCliente}"></input>
+            </div>
+        </div>
+        <div class="conunto">
+            <div id="labels">
+                <label for="name" id="name-label">* Nombre: </label>
+            </div>
+            <div id="inputs">
+                <input type="text" id="name" class="casilla" 
+                       placeholder="Inserte su nombre" value="#{clienteUI.cliente.nombreCliente}"></input>
+            </div>
+        </div>
+        
+        <div class="conunto">
+            <div id="labels">
+                <label for="apellido" id="name-label2">* Apellido Paterno: </label>
+            </div>
+            <div id="inputs">
+                <input type="text" id="apellido" class="casilla" 
+                       placeholder="Inserte su Apellido Paterno" value="#{clienteUI.cliente.apellidoPaternoCliente}"></input>
+            </div>
+        </div>
+
+        <div class="conunto">
+            <div id="labels">
+                <label for="apellidom" id="name-label3">* Apellido Materno: </label>
+            </div>
+            <div id="inputs">
+                <input type="text" id="apellido2" class="casilla" 
+                       placeholder="Inserte su Apellido Materno" 
+                       value="#{clienteUI.cliente.apellidoMaternoCliente}"></input>
+            </div>
+        </div>
+        
+        <div class="conunto">
+            <div id="labels">
+                <label for="tel" id="tel-label">Numero de Teléfono: </label>
+            </div>
+            <div id="inputs">
+                <input type="text" id="tel" class="casilla" 
+                       placeholder="Inserte su Numero de Teléfono" 
+                       value="#{clienteUI.cliente.telefonoCliente}"></input>
+            </div>
+        </div>
+        
+        <div class="conunto">
+            <div id="labels">
+                <label for="cel" id="cel-label">Numero de Móvil: </label>
+            </div>
+            <div id="inputs">
+                <input type="text" id="cel" class="casilla" 
+                       placeholder="Inserte su Numero de Móvil"
+                       value="#{clienteUI.cliente.celularCliente}"></input>
+            </div>
+        </div>
+        <div class="conunto">
+            <div id="labels">
+                <label for="direccion" id="direccion-label">Direccion: </label>
+            </div>
+            <div id="inputs">
+                <input type="text" id="direccion" class="casilla" 
+                       placeholder="Inserte su Direccion" 
+                       value="#{clienteUI.cliente.direccion}"></input>
+            </div>
+        </div>
+        <div class="conunto">
+            <div id="labels">
+                <label id="email-label" for="email">Direccion de Correo Electrónico: </label>
+            </div>
+            <div id="inputs">
+                <input type="email" name="email" id="email" class="casilla" 
+                       placeholder="Inserte su Correo Electrónico"
+                       value="#{clienteUI.cliente.correoElectronico}"></input>
+            </div>
+        </div>
+        <div class="conunto">
+            <div id="labels">
+                <label for="rfc" id="rfc-label">RFC:</label>
+            </div>
+            <div id="inputs">
+                <input type="text" name="edad" id="rfc" min="1" max="99" 
+                       class="casilla" placeholder="Insertar su RFC"
+                       value="#{clienteUI.cliente.rfc}"></input>
+            </div>
+        </div>
+
+        <h:commandButton type ="submit" action ="#{clienteUI.registro()}" value ="Registrar" />
+        <h:commandButton type ="submit" action ="#{clienteUI.registrar()}" value ="Cancelar" />
+    </form>
+</div>
+    </h:body>
+</html>
+

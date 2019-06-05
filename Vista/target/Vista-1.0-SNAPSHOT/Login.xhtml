@@ -1,0 +1,104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">    
+    
+    <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <h:head>
+        <title>Facelet Title</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="menu.css"/>
+        <link rel="stylesheet" href="LoginCss.css"/>
+    </h:head>
+    <h:body>
+        <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder">Menu</i></a>
+    
+    <i class="icon-reorder">
+
+    <div id="formulario">
+        <img src="logo.png" height="141" width="346" alt=""/>
+
+        <p id="description"><strong>Inicio de Sesión</strong></p>
+        <form id="survey-form" action="#">
+
+            <div class="conunto">
+
+                <div id="labels">
+                    <label for="nombre" id="nombre-label">Nombre de Usuario: </label>
+                </div>
+
+                <div id="inputs">
+                    <input type="text" id="nombre" class="casilla"
+                           placeholder="Ingresa el nombre de usuario " 
+                           value ="#{loginUI.usuario.nombreUsuario}"/>
+                </div>
+            </div>
+            
+            <div class="conunto">
+
+                <div id="labels">
+                    <label for="contraseña" id="contrasena-label">Constraseña: </label>
+                </div>
+
+                <div id="inputs">
+                    <input  type="password" id="contraseña" class="casilla"
+                           placeholder="Ingresa su contraseña"
+                           value="#{loginUI.usuario.contrasena}"/>
+                </div>
+            </div>
+            
+            <div class="conunto">
+
+                <div id="labels">
+                    <label for="Tipo de Usuario" id="contrasena-label">Constraseña: </label>
+                </div>
+
+                <div id="inputs">
+                    <input  type="type" id="type" class="casilla"
+                           placeholder="Ingresa su tipo de Usuario"
+                           value="#{loginUI.usuario.tipoUsuario}"/>
+                </div>
+            </div>
+<!-- 
+            <div class="conunto">
+
+                <div id="labels">
+                    <label for="gerente" id="gerente-label">Gerente: </label>
+                </div>
+
+                <div id="inputs">
+                    <input type="checkbox" id="gerente" class="casilla" 
+                           value="#{loginUI.usuario.tipoUsuario}"/>
+                </div>
+            </div>
+
+            <div class="conunto">
+
+                <div id="labels">
+                    <label for="ecc" id="ecc-label">Encargado de Control de Calidad: </label>
+                </div>
+
+                <div id="inputs">
+                    <input type="checkbox" id="ecc" class="casilla" 
+                           value="#{loginUI.usuario.tipoUsuario}"/>
+                </div>
+            </div>
+     -->
+     <h:commandButton value ="Iniciar Sesion" type ="submit" action="#{loginUI.login()}" />
+
+            <div class="conunto">
+
+                <div id="labels">
+                    <a href="recuperarContraseña.xhtml">Recuperar contraseña</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</i>
+    </h:body>
+</html>
+
